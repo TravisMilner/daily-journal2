@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Nashville Software School</title>
+        <link rel="stylesheet" href="./styles/main.css">
+    </head>
+
+    <body>
+        <main id="container">
+            <div id="header">
+                <h1>Travis' Journal Entry</h1>
+                <!-- <img src="https://cdn.hipwallpaper.com/i/70/96/IP835L.jpg" alt="Journal pages"> -->
+            </div>
+        
+            <div id="form">
+                <form action="#">
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date">
+                </form>
+                <form action="">
+                    <label for="concept">Concept Covered:</label>
+                    <input type="text" id="concept" name="concept">
+                </form>
+                <form action="">
+                    <label for="mood">Mood:</label>
+                    <select name="mood" id="mood">
+                        <option>Happy</option>
+                        <option>Sad</option>
+                        <option>Okay</option>
+                        <option>Nervous</option>
+                        <option>Accomplished</option>
+                    </select>
+        
+                </form>
+        
+            </div>
+            <!-- <div id="entry"> -->
+            <!-- <label for="journalEntry">Thoughts:</label> -->
+            <textarea id="journalEntry" name="journalEntry" placeholder="Thoughts?"></textarea>
+        
+            <!-- </div> -->
+        
+            <div id="buttons">
+            <button class="submit" type="button">Submit Entry</button>
+            <button type="button">Previous Entry</button>
+            <!-- </div> -->
+            <!-- <footer>
+                <h3>Check out my <a href="https://github.com/TravisMilner">GitHub</a></h3>
+                <h5>Travis Milner copyright &#169 </h5>
+            </footer> -->
+
+        </main>
+
+        <script type="module" src="./scripts/main.js"></script>
+    </body>
+</html>
