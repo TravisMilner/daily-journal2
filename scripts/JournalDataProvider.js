@@ -1,3 +1,23 @@
+const eventHub = document.querySelector("#container")
+
+const dispatchStateChangeEvent = () => {
+    const journalStateChangedEvent = new CustomEvent("journalStateChanged")
+    eventHub.dispatchEvent(journalStateChangedEvent)
+}
+
+export const saveJournalEntry = (newJournalEntry) => {
+    fetch("http://localhost:8088/entries" , {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(newJournalEntry)
+    })
+    .then(getEntries)
+    .then(dispatchStateChangeEvent)
+}
+
+
 /*
  *   Journal data provider for Daily Journal application
  *
@@ -29,4 +49,8 @@ export const getEntries = () => {
             journal = entries
         }
     )
+} 
+
+export const useEntries = () => {
+    return journal.slice()
 }

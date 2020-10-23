@@ -1,25 +1,32 @@
 {
-    "entries": [
-        {
-            "id": 1,
-            "date": "07/24/2025",
-            "concept": "HTML & CSS",
-            "entry": "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
-            "mood": "Ok"
-        },
-        {
-            "id": 2,
-            "date": "10/02/2020",
-            "concept": "CSS",
-            "entry": "We talked about CSS and how it's better to look it all up",
-            "mood": "Good"
-        },
-        {
-            "id": 3,
-            "date": "10/10/2020",
-            "concept": "Javascript",
-            "entry": "We talked about how to get HTML to render. It's hard",
-            "mood": "nervous"
-        }
-    ]
+  "entries": [
+    {
+      "id": 1,
+      "date": "07/24/2025",
+      "concept": "HTML & CSS",
+      "entry": "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
+      "mood": "Ok"
+    },
+    {
+      "id": 2,
+      "date": "10/02/2020",
+      "concept": "CSS",
+      "entry": "We talked about CSS and how it's better to look it all up",
+      "mood": "Good"
+    },
+    {
+      "id": 3,
+      "date": "10/10/2020",
+      "concept": "Javascript",
+      "entry": "We talked about how to get HTML to render. It's hard",
+      "mood": "nervous"
+    },
+    {
+      "date": "2020-10-22",
+      "concept": "Refactoring",
+      "mood": "Nervous",
+      "text": "I am really hoping this works",
+      "id": 4
+    }
+  ]
 }
