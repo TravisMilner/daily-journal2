@@ -11,7 +11,7 @@ export const JournalEntryComponent = (entry) => {
             <h3>Entry</h3>
             <p>${entry.entry}</p>
             <h3>Mood</h3>
-            <p>${entry.mood}</p>
+            <p>${entry.mood.label}</p>
             
         </section>
     `
