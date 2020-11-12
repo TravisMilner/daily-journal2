@@ -1,10 +1,11 @@
 import {saveJournalEntry} from "./JournalDataProvider.js"
+import { getMoods, useMoods } from "./MoodDataProvider.js"
 
 const JournalForm = document.querySelector("#form")
 
 const eventHub = document.querySelector("#container")
 
-export const JournalFormComponent = () => {
+export const JournalFormComponent = (moodArr) => {
     JournalForm.innerHTML += `<form class = "formClass" action="#">
     <div class= "entry">
     <label for="date">Date:</label>
@@ -17,13 +18,12 @@ export const JournalFormComponent = () => {
     </div>
 
     <div class = "entry">
-    <label for="mood">Mood:</label>
-    <select name="mood" id="mood">
-        <option>Happy</option>
-        <option>Sad</option>
-        <option>Okay</option>
-        <option>Nervous</option>
-        <option>Accomplished</option>
+    <select id = "mood">
+    <option value = "0" > Mood</option>
+    ${moodArr.map(mood => {
+        return `<option value = "${mood.id}">${mood.label}</option>`
+    }).join("")
+}
     </select>
     <div class = "textArea">
     <textarea id="journalEntry" name="journalEntry" placeholder="Thoughts?"></textarea>
@@ -55,5 +55,10 @@ eventHub.addEventListener("click", clickEvent => {
 })
 
 export const journalForm = () => {
-    JournalFormComponent;
+    getMoods()
+    .then(() => {
+        console.log(useMoods())
+
+        JournalFormComponent(useMoods());
+    })
 }
